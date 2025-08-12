@@ -1,0 +1,57 @@
+﻿<Window x:Class="ERP.Shell.LoginScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        Title="LoginScreen"
+        Height="250" Width="450
+        "
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+
+
+    <Border Background="#E5042C39" CornerRadius="10,10,10,10" BorderThickness="1" Margin="20,20,20,20">
+        <Border.Effect>
+            <DropShadowEffect/>
+        </Border.Effect>
+        <Grid >
+            <Grid.Background>
+                <ImageBrush/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="388*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="7*"/>
+            </Grid.ColumnDefinitions>
+            <dxe:TextEdit x:Name="userText" HorizontalAlignment="Center" VerticalAlignment="Top" Width="275" NullText="USERNAME" Height="35" FontSize="20" Margin="0,67,0,0" />
+            <dxe:PasswordBoxEdit x:Name="pswdText" HorizontalAlignment="Center" VerticalAlignment="Top" Width="275" NullText="PASSWORD" Height="35" Margin="0,106,0,0" FontSize="20" />
+            <Button x:Name="saveBut" Content="LOGIN" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="100" Height="35" FontWeight="Bold" FontSize="20" Foreground="#FF9DA79C" Margin="0,0,17,20" Click="Button_Click_2" Background="Transparent" MouseEnter="saveBut_MouseEnter" MouseLeave="saveBut_MouseLeave" Cursor="Hand" >
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop x:Name="MyGradientStop" Color="#FF978E8E" Offset="0"/>
+                        <GradientStop Color="#FF978E8E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+            <Button Content="Button" HorizontalAlignment="Right" Margin="0,2,0,2" VerticalAlignment="Top" Width="30" Height="30" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click" Cursor="Hand">
+                <Button.Background>
+                    <ImageBrush  Stretch="Uniform" ImageSource="/Plugins/closeBut.png"/>
+                </Button.Background>
+            </Button>
+            <Button Content="Button" Margin="0,2,27,2" VerticalAlignment="Top" Height="30" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click_1" HorizontalAlignment="Right" Width="30" Cursor="Hand">
+                <Button.Background>
+                    <ImageBrush  Stretch="Uniform" ImageSource="/Plugins/minimizeBut.png"/>
+                </Button.Background>
+            </Button>
+            <Grid x:Name="TopBar" Background="Transparent" Height="35" MouseDown="Grid_MouseDown" VerticalAlignment="Top" Margin="0,0,51,0">
+            </Grid>
+            <Label x:Name="invalidText" Content="Invalid username or password." Margin="61,143,149,20" FontSize="14" Foreground="Red"/>
+        </Grid>
+    </Border>
+</Window>

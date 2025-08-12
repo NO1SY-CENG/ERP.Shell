@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="accont.png" />
+    <None Remove="admin.png" />
+    <None Remove="bussinesTerm.png" />
+    <None Remove="closeBut.png" />
+    <None Remove="financal.png" />
+    <None Remove="minimizeBut.png" />
+    <None Remove="office.png" />
+    <None Remove="products.png" />
+    <None Remove="purchase.png" />
+    <None Remove="quick.png" />
+    <None Remove="report.png" />
+    <None Remove="sale.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="devexpress.wpf.carousel" Version="25.1.3" />
+    <PackageReference Include="devexpress.wpf.scheduling" Version="25.1.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="accont.png" />
+    <Resource Include="admin.png" />
+    <Resource Include="bussinesTerm.png" />
+    <Resource Include="financal.png" />
+    <Resource Include="office.png" />
+    <Resource Include="Plugins\closeBut.png" />
+    <Resource Include="Plugins\minimizeBut.png" />
+    <Resource Include="products.png" />
+    <Resource Include="purchase.png" />
+    <Resource Include="quick.png" />
+    <Resource Include="report.png" />
+    <Resource Include="sale.png" />
+  </ItemGroup>
+
+</Project>
